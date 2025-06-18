@@ -28,7 +28,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/types/aframe-jsx.d.ts"
+    "src/aframe-jsx.d.ts"
   ],
   "exclude": ["node_modules"]
 }
