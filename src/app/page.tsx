@@ -1,5 +1,3 @@
-import dynamic from 'next/dynamic';
-import { FC } from 'react';
 import AFrameWrapper from './components/AFrameWrapper';
 
 export default function Home() {
