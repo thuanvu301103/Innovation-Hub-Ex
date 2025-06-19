@@ -1,8 +1,9 @@
 'use client';
 import { useEffect } from 'react';
 import 'aframe';
+//import {Station} from './Map';
 
-const AFrameScene = () => {
+const AFrameScene = ({curStation}) => {
     useEffect(() => {
         const AFRAME = window.AFRAME;
         const THREE = window.THREE;
@@ -56,7 +57,7 @@ const AFrameScene = () => {
             {/* Background hình cầu 360 */}
             <a-entity
                 geometry="primitive: sphere; radius: 10000; thetaLength: 70; thetaStart: 60; phiLength: 300"
-                material="src: /360.jpg; side: back"
+                material={`src: ${curStation.backgroundUrl}; side: back`}
                 rotation="0 0 0"
             ></a-entity>
 

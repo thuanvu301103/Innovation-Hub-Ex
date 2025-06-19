@@ -1,10 +1,13 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-
-// Import động AFrameScene và tắt SSR
+import {Station} from './Map';
 const AFrameScene = dynamic(() => import('./AFrameScene'), { ssr: false });
 
-export default function AFrameWrapper() {
-  return <AFrameScene />;
+interface AFrameWrapperProps {
+  curStation: Station | null
+}
+
+export default function AFrameWrapper({curStation}: AFrameWrapperProps) {
+  return <AFrameScene curStation={curStation}/>;
 }
