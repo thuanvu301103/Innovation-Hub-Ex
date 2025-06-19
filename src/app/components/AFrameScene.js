@@ -9,11 +9,11 @@ const AFrameScene = ({curStation}) => {
         const THREE = window.THREE;
 
         if (!AFRAME || !THREE) {
-            console.warn('AFRAME hoặc THREE chưa sẵn sàng');
+            console.warn('AFRAME or THREE not ready');
             return;
         }
 
-        // Ghi đè tick của look-controls để giới hạn góc quay
+        // Limit camera's rotation
         const lookControls = AFRAME.components['look-controls'];
         if (lookControls && lookControls.Component && !lookControls.Component.prototype.__patched) {
             const originalTick = lookControls.Component.prototype.tick;
@@ -30,8 +30,8 @@ const AFrameScene = ({curStation}) => {
                 let pitch = THREE.MathUtils.radToDeg(pitchObject.rotation.x);
                 let yaw = THREE.MathUtils.radToDeg(yawObject.rotation.y);
 
-                const minPitch = -20, maxPitch = 20;
-                const minYaw = -80, maxYaw = 80;
+                const minPitch = -5, maxPitch = 5;
+                const minYaw = -100, maxYaw = 100;
 
                 pitch = Math.max(minPitch, Math.min(maxPitch, pitch));
                 yaw = Math.max(minYaw, Math.min(maxYaw, yaw));
@@ -56,7 +56,7 @@ const AFrameScene = ({curStation}) => {
         <a-scene>
             {/* Background hình cầu 360 */}
             <a-entity
-                geometry="primitive: sphere; radius: 10000; thetaLength: 70; thetaStart: 60; phiLength: 300"
+                geometry="primitive: sphere; radius: 10000; thetaLength: 70; thetaStart: 55; phiLength: 300; phiStart:-240" 
                 material={`src: ${curStation.backgroundUrl}; side: back`}
                 rotation="0 0 0"
             ></a-entity>
@@ -79,7 +79,6 @@ const AFrameScene = ({curStation}) => {
                 raycaster="objects: .clickable"
             ></a-entity>
 
-            {/* Camera có giới hạn góc quay */}
             <a-camera fov="60" look-controls></a-camera>
         </a-scene>
     );

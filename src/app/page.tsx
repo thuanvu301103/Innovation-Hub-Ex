@@ -20,9 +20,7 @@ export default function Home() {
 
 return (
   <div className="relative h-screen w-screen">
-    {/* AFrame scene nằm phía dưới */}
     <AFrameWrapper curStation={curStation}/>
-    {/* Sidebar nằm phía trên */}
     <div className="absolute top-0 left-0 z-50">
       <SidebarMap selected={selectedStation} setSelected={setSelectedStation}/>
     </div>
