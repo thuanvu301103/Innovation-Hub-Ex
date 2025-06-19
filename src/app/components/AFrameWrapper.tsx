@@ -5,9 +5,10 @@ import {Station} from './Map';
 const AFrameScene = dynamic(() => import('./AFrameScene'), { ssr: false });
 
 interface AFrameWrapperProps {
-  curStation: Station | null
+  curStation: Station | null;
+  selectItem: (code: string | null) => void;
 }
 
-export default function AFrameWrapper({curStation}: AFrameWrapperProps) {
-  return <AFrameScene curStation={curStation}/>;
+export default function AFrameWrapper({curStation, selectItem}: AFrameWrapperProps) {
+  return <AFrameScene curStation={curStation} selectItem={selectItem}/>;
 }

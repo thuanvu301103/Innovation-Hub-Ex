@@ -1,5 +1,15 @@
 import { StaticImageData } from "next/image";
 
+export type Item = {
+  code: string;
+  name: string;
+  description?: string;
+  modelUrl: string;
+  x: number;
+  y: number;
+  z: number;
+};
+
 export type Station = {
   code: string;
   name: string;
@@ -7,6 +17,7 @@ export type Station = {
   backgroundUrl: string;
   latitude: number;
   longitude: number;
+  items: Record<string, Item>;
 };
 
 export type MapData = {

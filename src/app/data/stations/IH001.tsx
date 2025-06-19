@@ -7,6 +7,7 @@ const IH001Station: Station = {
     backgroundUrl: '/station/IH001BG.jpg',
     latitude: 2,
     longitude: 1,
+    items: {}
 };
 
 export default IH001Station;
