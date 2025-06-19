@@ -4,7 +4,7 @@ const StartStation: Station = {
     code: 'start',
     name: 'start',
     description: 'start point',
-    backgroundUrl: '/station/start.jpg',
+    backgroundUrl: '/station/Start.jpg',
     latitude: 7,
     longitude: 0,
 };
