@@ -30,10 +30,10 @@ export default function Home() {
 return (
   <div className="relative h-screen w-screen">
     <AFrameWrapper curStation={curStation} selectItem={setSelectedItem}/>
-    <div className="absolute top-0 left-0 z-50">
+    <div className="absolute top-0 left-0 z-50 w-[85%] lg:w-1/4">
       <SidebarMap selected={selectedStation} setSelected={setSelectedStation}/>
     </div>
-    <div className="absolute top-0 right-0 z-50">
+    <div className="absolute top-0 right-0 z-50 w-[85%] lg:w-1/4">
       <SidebarItem curItem={curItem} setModelCode={setSelectedItem}/>
     </div>
   </div>
