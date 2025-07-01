@@ -26,7 +26,7 @@ const SidebarItem = ({ curItem, setModelCode }: RightSidebarProps) => {
         >
           <XMarkIcon className={`h-6 w-6 ${curItem ? 'text-blue-500' : 'text-black'}`} />
         </button>
-        <aside className="fixed right-0 top-0 z-40 w-1/2 p-5 bg-black/50 h-screen overflow-y-auto">
+        <aside className="fixed right-0 top-0 z-40 w-[85%] lg:w-1/2 p-5 bg-black/50 h-screen overflow-y-auto">
           <h2 className="text-white text-lg font-semibold mb-4">Mô hình 3D mô phỏng</h2>
 
           {/* Three.js Viewer */}
