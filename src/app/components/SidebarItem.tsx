@@ -33,7 +33,7 @@ const ModelItem = ({curItem}: ItemProps) => {
 
 const ImageItem = ({curItem}: ItemProps) => {
   return <> 
-    <div className="relative w-full h-3/5 bg-indigo-100 rounded overflow-hidden">
+    <div className="relative w-full aspect-video bg-indigo-100 rounded">
       <Image
         src={curItem.Uri}
         alt={curItem.name}
