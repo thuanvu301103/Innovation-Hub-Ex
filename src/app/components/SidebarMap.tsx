@@ -47,7 +47,7 @@ const SidebarMap = ({selected, setSelected} : SidebarMapProps ) => {
 
       {/* Sidebar */}
       {isVisible && (
-        <aside className="flex flex-col justify-around z-40 w-96 p-5 bg-black/50 h-screen overflow-y-auto">
+        <aside className="flex flex-col justify-between z-40 w-96 p-5 bg-black/50 h-screen overflow-y-auto pt-20">
           <div className="relative w-full" style={{ aspectRatio: `${imageWidth} / ${imageHeight}` }}>
             <Image
               src={IHMap.thumbnailUrl}
@@ -83,10 +83,10 @@ const SidebarMap = ({selected, setSelected} : SidebarMapProps ) => {
           </div>
 
           {/* Innovation Hub Info */}
-          <div className="w-full max-w-sm mx-auto mt-10">
+          <div className="w-full max-w-sm mx-auto mt-2 mb-20">
             <div className="border-t-4 border-white bg-black/40 text-gray-300 p-6 shadow-lg">
-              <h3 className="text-lg font-semibold mb-2">{IHMap.name}</h3>
-              <p className="text-sm text-gray-400">{IHMap.description}</p>
+              <h3 className="text-lg font-semibold mb-2">{IHMap.stations[selected].name.toUpperCase()}</h3>
+              <p className="text-sm text-gray-400">{IHMap.stations[selected].description}</p>
             </div>
           </div>
         </aside>
