@@ -1,5 +1,5 @@
 import type { Station } from '../../components/Map';
-import IH001Item001 from '../items/IH001-001';
+import IH001Item001 from '../items/IH010-001';
 
 const StartStation: Station = {
     code: 'start',
@@ -8,9 +8,7 @@ const StartStation: Station = {
     backgroundUrl: '/station/Start.jpg',
     latitude: -1,
     longitude: 8,
-    items: {
-        "IH001-001": IH001Item001 
-    }
+    items: {}
 };
 
 export default StartStation;

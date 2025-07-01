@@ -54,11 +54,16 @@ const AFrameScene = ({curStation, selectItem}) => {
         }
     });
 
+        const images = document.querySelectorAll('[look-at]');
+        images.forEach((img) => {
+            img.setAttribute('look-at', '#camera');
+        });
         
     }, [curStation]);
 
     return (
         <a-scene>
+            <a-camera id="#camera" fov="60" look-controls></a-camera>
             {/* Background 360 */}
             <a-entity
                 geometry="primitive: sphere; radius: 10000; thetaLength: 70; thetaStart: 55; phiLength: 300; phiStart:-240" 
@@ -71,8 +76,7 @@ const AFrameScene = ({curStation, selectItem}) => {
             <a-assets>
                 <img id="handIcon" src="/icons/hand.png" />
             </a-assets>
-            
-            
+
             {/* Hiển thị các item */}
             {Object.values(curStation.items).map((item) => (
                 <a-image
@@ -80,8 +84,10 @@ const AFrameScene = ({curStation, selectItem}) => {
                     id={item.code}
                     src="#handIcon"
                     position={`${item.x} ${item.y} ${item.z}`}
+                    rotation={`0 ${item.rotation} 0`}
                     width="0.5"
                     height="0.5"
+                    look-at="#camera"
                     class="clickable"
                 ></a-image>
             ))}
@@ -92,7 +98,6 @@ const AFrameScene = ({curStation, selectItem}) => {
                 raycaster="objects: .clickable"
             ></a-entity>
 
-            <a-camera fov="60" look-controls></a-camera>
         </a-scene>
     );
 };

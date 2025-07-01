@@ -29,6 +29,7 @@ export default function Home() {
 
 return (
   <div className="relative h-screen w-screen">
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <AFrameWrapper curStation={curStation} selectItem={setSelectedItem}/>
     <div className="absolute top-0 left-0 z-50 w-[85%] lg:w-1/4">
       <SidebarMap selected={selectedStation} setSelected={setSelectedStation}/>

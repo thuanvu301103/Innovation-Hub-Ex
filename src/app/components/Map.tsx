@@ -3,11 +3,13 @@ import { StaticImageData } from "next/image";
 export type Item = {
   code: string;
   name: string;
+  type: 'image' | 'model';
   description?: string;
-  modelUrl: string;
+  Uri: string;
   x: number;
   y: number;
   z: number;
+  rotation: number;
 };
 
 export type Station = {
