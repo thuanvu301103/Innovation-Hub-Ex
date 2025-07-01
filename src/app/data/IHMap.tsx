@@ -8,6 +8,11 @@ import IH004Station from './stations/IH004';
 import IH005Station from './stations/IH005';
 import IH006Station from './stations/IH006';
 import IH007Station from './stations/IH007';
+import IH008Station from './stations/IH008';
+import IH009Station from './stations/IH009';
+import IH010Station from './stations/IH010';
+import IH011Station from './stations/IH011';
+import IH012Station from './stations/IH012';
 
 const IHMap: MapData = {
     thumbnailUrl: IHThumbnail,
@@ -24,7 +29,11 @@ const IHMap: MapData = {
         IH005: IH005Station,
         IH006: IH006Station,
         IH007: IH007Station,
-
+        IH008: IH008Station,
+        IH009: IH009Station,
+        IH010: IH010Station,
+        IH011: IH011Station,
+        IH012: IH012Station,
     }
 };
 
