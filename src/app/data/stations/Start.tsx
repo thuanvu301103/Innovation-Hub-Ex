@@ -6,7 +6,7 @@ const StartStation: Station = {
     name: 'start',
     description: 'start point',
     backgroundUrl: '/station/Start.jpg',
-    latitude: 0,
+    latitude: -1,
     longitude: 8,
     items: {
         "IH001-001": IH001Item001 
