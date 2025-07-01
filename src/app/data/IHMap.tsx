@@ -6,8 +6,8 @@ import IH002Station from './stations/IH002';
 
 const IHMap: MapData = {
     thumbnailUrl: IHThumbnail,
-    maxLatitude: 10,
-    maxLongitude: 15,
+    maxLatitude: 8,
+    maxLongitude: 16,
     name: "INNOVATION HUB",
     description: "Mục tiêu chính của Trung tâm CT Innovation Hub là nơi nuôi dưỡng, thúc đẩy 9 ngành công nghệ mới, đều là những lĩnh vực ưu tiên theo Nghị quyết 57…",
     stations: {

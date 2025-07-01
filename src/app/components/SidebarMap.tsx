@@ -32,9 +32,8 @@ interface SidebarMapProps {
 const SidebarMap = ({selected, setSelected} : SidebarMapProps ) => {
   const [isVisible, setIsVisible] = useState(true);
 
-  // Kích thước ảnh bản đồ (cần khớp với Image)
-  const imageWidth = 384;
-  const imageHeight = 216;
+  const imageWidth = 541;
+  const imageHeight = 333;
 
   return (
     <div className="flex flex-col">
@@ -49,13 +48,12 @@ const SidebarMap = ({selected, setSelected} : SidebarMapProps ) => {
       {/* Sidebar */}
       {isVisible && (
         <aside className="flex flex-col justify-around z-40 w-96 p-5 bg-black/50 h-screen overflow-y-auto">
-          <div className="relative w-full" style={{ height: imageHeight }}>
+          <div className="relative w-full" style={{ aspectRatio: `${imageWidth} / ${imageHeight}` }}>
             <Image
               src={IHMap.thumbnailUrl}
               alt="Innovation Hub Map Thumbnail"
-              width={imageWidth}
-              height={imageHeight}
-              className="w-full mb-5"
+              fill
+              className="w-full"
             />
 
             {/* Station Markers */}
@@ -69,7 +67,7 @@ const SidebarMap = ({selected, setSelected} : SidebarMapProps ) => {
                   minLng: 0,
                   maxLng: IHMap.maxLongitude,
                 },
-                { width: imageWidth, height: imageHeight }
+                { width: 344, height: 211.75 }
               );
 
               return (
