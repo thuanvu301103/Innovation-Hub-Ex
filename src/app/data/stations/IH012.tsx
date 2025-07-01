@@ -5,8 +5,8 @@ const IH012Station: Station = {
     name: 'IH012',
     description: 'IH012',
     backgroundUrl: '/station/IH012BG.jpg',
-    latitude: 5,
-    longitude: 10,
+    latitude: 6,
+    longitude: 11,
     items: {}
 };
 
