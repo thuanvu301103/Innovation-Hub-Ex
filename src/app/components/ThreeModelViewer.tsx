@@ -17,7 +17,7 @@ const Model: React.FC<ViewerProps> = ({ modelUrl }) => {
 
 const ThreeModelViewer: React.FC<ViewerProps> = ({ modelUrl }) => {
   return (
-    <Canvas camera={{ position: [0, 0.5, 0], fov: 50 }}>
+    <Canvas camera={{ position: [0, 50, 0], fov: 50, near: 0.1, far: 10000 }}>
       <ambientLight intensity={0.5} />
       <directionalLight position={[1, 1, 0]} intensity={0.8} />
       <Suspense fallback={null}>
