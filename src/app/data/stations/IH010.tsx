@@ -1,5 +1,7 @@
 import type { Station } from '../../components/Map';
-import IH001Item001 from '../items/IH010-001';
+import IH010Item001 from '../items/IH010-001';
+import IH010Item002 from '../items/IH010-002';
+
 
 const IH010Station: Station = {
     code: 'IH010',
@@ -9,7 +11,8 @@ const IH010Station: Station = {
     latitude: 1,
     longitude: 11,
     items: {
-        "IH001-001": IH001Item001 
+        "IH010-001": IH010Item001,
+        "IH010-002": IH010Item002 
     }
 };
 

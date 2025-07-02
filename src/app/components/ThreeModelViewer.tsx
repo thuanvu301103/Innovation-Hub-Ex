@@ -8,7 +8,11 @@ interface ViewerProps {
 
 const Model: React.FC<ViewerProps> = ({ modelUrl }) => {
   const { scene } = useGLTF(modelUrl);
-  return <primitive object={scene} />;
+  return (
+    <group position={[0, 0, -5]}>
+      <primitive object={scene} position={[-20, -100, -20]} rotation={[0,Math.PI / 1,0]}/>
+    </group>
+  );
 };
 
 const ThreeModelViewer: React.FC<ViewerProps> = ({ modelUrl }) => {

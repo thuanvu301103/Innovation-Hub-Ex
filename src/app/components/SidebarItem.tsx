@@ -18,21 +18,23 @@ interface ItemProps {
 }
 
 const ModelItem = ({curItem}: ItemProps) => {
-  return <> 
-    <div className="relative w-full h-3/5 bg-indigo-100 rounded overflow-hidden">
-      <ThreeModelViewer modelUrl={curItem == null?`/3Dmodel/test.glb`: `/3Dmodel/${curItem.code}.glb`} />
+  return (
+  <div className="flex flex-col justify-between h-full"> 
+    <div className="relative w-full h-1/2 bg-indigo-100 rounded overflow-hidden">
+      <ThreeModelViewer modelUrl={curItem.Uri} />
     </div>
-    <div className="w-full mt-10">
+    <div className="w-full mt-1 mb-15">
       <div className="border-t-4 border-white bg-black/40 text-gray-300 p-6 shadow-lg">
-        <h3 className="text-lg font-semibold mb-2">{curItem.name}</h3>
+        <h3 className="text-lg font-semibold mb-2">{curItem.name.toUpperCase()}</h3>
         <p className="text-sm text-gray-400">{curItem.description}</p>
       </div>
     </div>
-  </>;
+  </div>);
 }
 
 const ImageItem = ({curItem}: ItemProps) => {
-  return <> 
+  return (
+  <div className="flex flex-col justify-between"> 
     <div className="relative w-full aspect-video bg-indigo-100 rounded">
       <Image
         src={curItem.Uri}
@@ -43,11 +45,11 @@ const ImageItem = ({curItem}: ItemProps) => {
     </div>
     <div className="w-full mt-10">
       <div className="border-t-4 border-white bg-black/40 text-gray-300 p-6 shadow-lg">
-        <h3 className="text-lg font-semibold mb-2">{curItem.name}</h3>
+        <h3 className="text-lg font-semibold mb-2">{curItem.name.toUpperCase()}</h3>
         <p className="text-sm text-gray-400">{curItem.description}</p>
       </div>
     </div>
-  </>;
+  </div>);
 }
 
 const SidebarItem = ({ curItem, setModelCode }: RightSidebarProps) => {
